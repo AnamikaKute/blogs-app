@@ -1,0 +1,67 @@
+.mainSectionOfDashboardPage{
+    margin: 0;
+    height: 100vh;
+    background-color: lightgray;
+}
+
+.headerSection{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px ; 
+    background-color:navy ;
+    align-items: center;
+}
+.loginAndRegisterSection{
+    display: flex;
+    gap:20px;
+}
+.titleOfLoginScreen{
+    color:white;
+    font-size: 20px;
+    font-weight: 500;
+}
+.loginSection{
+    color:white;
+    font-size: 17px;
+     font-weight: 500 ;
+}
+.innerBoxOfLoginPage{
+     width: 50%;   
+     padding: 20px ;
+     height: 20vh;
+     border-radius: 5px;
+     margin: auto;
+     margin-top: 20px;
+     background-color: #ffffff;
+     box-shadow: 3px 2px 1px rgb(176, 176, 176);
+}
+.titleLogin{
+font-size: 23px;
+     font-weight: 600 ;
+     margin-bottom: 8px;
+
+}
+.subtitleLoginPage{
+font-size: 17px;
+}
+.buttonSection{
+    display: flex;
+    justify-content: end;
+    gap:10px;
+}
+.loginButton{
+    padding: 10px ;
+    background-color: navy;
+    color:white;
+    font-size: 14px;
+    font-weight:600 ;
+    border-radius: 3px;
+}
+.registerButton{
+    padding: 10px ;
+    background-color: navy;
+    color:white;
+font-size: 14px;
+    font-weight:600 ;
+    border-radius: 3px;
+}

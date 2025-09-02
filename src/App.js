@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import CreateNewPost from './Component/CreateNewPost/CreateNewPost';
+import Title from './Component/Title/Title';
 function App() {
   return (
-  <CreateNewPost
+  <Title
   />
 
   

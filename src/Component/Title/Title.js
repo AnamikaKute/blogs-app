@@ -5,16 +5,18 @@ function Title(){
            <div className='headerSectionOfTitlePage'>
                 <div className='titleOfTitlePage'>Blogs</div>
                 <div className='loginAndRegistrationSectionOfTitle'>
-                    <div className='rightSectionTitlesOfTitlePage'>Ishwari Kanase   <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></div>
+                    <div className='rightSectionTitlesOfTitlePage'> Ishwari Kanase         <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></div>
                     <div className='rightSectionTitlesOfTitlePage'>Logout</div>
                 </div>
 
             </div>
             <div className='outerBoxOfTitlePage'>
-                <div className='mainTitleInOuterBox'>Title</div>
+                <div>
+                    <input type='text'placeholder='Title' className='mainTitleInOuterBox'></input>
+                </div>
                 <hr/>
-                <div className='innerBoxOfTitlePage'>
-                    <div className='descriptionTitle'>Desription</div>
+                <div>
+                    <textarea className='textareaField'>Desription</textarea>
                 </div>
                 <div className='btnSectionOfTitlePage'>
                     <div><button className='cancelAndSaveBtn'>Cancel</button></div>

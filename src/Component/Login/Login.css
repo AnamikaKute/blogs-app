@@ -1,0 +1,81 @@
+.mainSectionOfLoginPage{
+     height: 100vh;
+    margin: 0px;
+    background-color: lightgray;
+}
+
+.headerSectionOfLoginPage{
+    display: flex;
+    padding: 15px 30px;
+    background-color: navy;
+    color: white;
+    justify-content: space-between;
+}
+.leftSectionTitlesOfLoginPage{
+    font-size: 19px;
+    font-weight: 600;
+}
+.rightSectionTitlesOfLoginPage{
+    font-size: 17px;
+    font-weight: 600;
+}
+.loginAndRegisterSectionOfLoginPage{
+display:flex;
+gap:20px;
+
+}
+.loginBox{
+    margin: auto;
+    width: 27%;
+    height: 55vh;
+    background-color:rgb(237, 236, 235);
+    margin-top: 7%;
+    padding: 10px;
+    border-radius: 8px;
+    flex: 5;
+}
+.titleOfLoginPage{
+font-size: 30px;
+font-weight: 700;
+margin-bottom: 5px;
+}
+.subTitleOfLoginPage{
+font-size: 17px;
+}
+.titleLogin{
+    font-size: 23px;
+    font-weight: 700;
+    color:navy;
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: 10px;
+}
+.labelsOfLoginInputFields{
+    font-size: 15px;
+
+}
+.placeholderFieldOfLoginPage{
+    margin-top: 4px;
+    padding: 9px;
+    width: 95%;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+}
+.btnLogin{
+    width: 99%;
+    padding: 9px;
+    background-color: navy;
+    border-radius: 5px;
+    border: none;
+    color:white;
+    text-decoration: underline;
+}
+.btnSectionOfLoginPage{
+    margin-top: 18px;
+}
+.footerNoteOfLoginPage{
+   text-align: center;
+   
+}

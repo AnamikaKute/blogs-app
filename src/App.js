@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Dashboard from './Component/Dashboard/Dashboard';
+import Register from './Component/Register/Register';
 
 function App() {
   return (
-  <Dashboard
+  <Register
   />
 
   

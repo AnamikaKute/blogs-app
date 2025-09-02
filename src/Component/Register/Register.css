@@ -1,0 +1,81 @@
+.mainSectionOfRegisterationPage{
+     height: 100vh;
+    margin: 0px;
+    background-color: lightgray;
+}
+
+.headerSectionOfRegisterationPage{
+    display: flex;
+    padding: 15px 30px;
+    background-color: navy;
+    color: white;
+    justify-content: space-between;
+}
+.leftSectionTitle{
+    font-size: 19px;
+    font-weight: 600;
+}
+.rightSectionTitles{
+    font-size: 17px;
+    font-weight: 600;
+}
+.loginAndRegisterSection{
+display:flex;
+gap:20px;
+
+}
+.registrationBox{
+    margin: auto;
+    width: 27%;
+    height: 55vh;
+    background-color:rgb(237, 236, 235);
+    margin-top: 7%;
+    padding: 10px;
+    border-radius: 8px;
+    flex: 5;
+}
+.titleOfRegisterationPage{
+font-size: 30px;
+font-weight: 700;
+margin-bottom: 5px;
+}
+.subTitleOfRegisterationPage{
+font-size: 17px;
+}
+.titleRegister{
+    font-size: 23px;
+    font-weight: 700;
+    color:navy;
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: 10px;
+}
+.labelsOfInputFields{
+    font-size: 15px;
+
+}
+.placeholderFieldOfRegisterPage{
+    margin-top: 4px;
+    padding: 9px;
+    width: 95%;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+}
+.btnRegister{
+    width: 99%;
+    padding: 9px;
+    background-color: navy;
+    border-radius: 5px;
+    border: none;
+    color:white;
+    text-decoration: underline;
+}
+.btnSectionOfRegisterationPage{
+    margin-top: 18px;
+}
+.footerNote{
+   text-align: center;
+   
+}

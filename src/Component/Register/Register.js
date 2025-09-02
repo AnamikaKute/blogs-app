@@ -25,7 +25,7 @@ function Register(){
             <div className='btnSectionOfRegisterationPage'><button className='btnRegister'>Register</button></div>
             
             </div>
-            <footer className='footerNote'>Copyright@2022</footer>
+            <footer className='footerNote'>Copyright <i class="fa fa-copyright" aria-hidden="true"></i>2022</footer>
         </div>
     ) 
 }

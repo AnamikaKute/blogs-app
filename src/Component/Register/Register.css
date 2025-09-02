@@ -6,13 +6,13 @@
 
 .headerSectionOfRegisterationPage{
     display: flex;
-    padding: 15px 30px;
+    padding: 10px 30px;
     background-color: navy;
     color: white;
     justify-content: space-between;
 }
 .leftSectionTitle{
-    font-size: 19px;
+    font-size: 23px;
     font-weight: 600;
 }
 .rightSectionTitles{
@@ -29,6 +29,8 @@ gap:20px;
     width: 27%;
     height: 55vh;
     background-color:rgb(237, 236, 235);
+    box-shadow: 1px 2px 2px grey ;
+
     margin-top: 7%;
     padding: 10px;
     border-radius: 8px;
@@ -76,6 +78,14 @@ font-size: 17px;
     margin-top: 18px;
 }
 .footerNote{
-   text-align: center;
+   
+     position: fixed;  
+  font-size: 14px;     
+  bottom: 0;             
+  left: 0;
+  width: 100%;           
+  text-align: center;    
+  padding: 3px;
+  background-color: rgb(188, 187, 187);
    
 }

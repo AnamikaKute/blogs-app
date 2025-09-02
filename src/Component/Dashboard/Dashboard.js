@@ -12,7 +12,7 @@ function Dashboard() {
                 </div>
             </div>
             <div className='innerBoxOfLoginPage'>
-                <div className='titleLogin'>Blogs!</div>
+                <div className='titleLoginOfDashboard'>Blogs!</div>
                 <div className='subtitleLoginPage'> Publish your passion, your way...</div>
                 <hr />
             
@@ -21,6 +21,8 @@ function Dashboard() {
                     <div><button className='registerButton'>Register</button></div>
 
             </div>
+             <footer className='footerNoteOfDashboard'>Copyright
+                <i class="fa fa-copyright" aria-hidden="true"></i>2022</footer>
             </div>
         </div>
     )

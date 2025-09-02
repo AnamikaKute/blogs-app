@@ -3,8 +3,7 @@ import './App.css';
 import Title from './Component/Title/Title';
 function App() {
   return (
-  <Title
-  />
+  <Title/>
 
   
   );

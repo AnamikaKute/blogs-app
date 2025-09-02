@@ -46,6 +46,10 @@ function CreateNewPost() {
                     </div>
                 </div>
             </div>
+            <div>
+            <footer className='footerNoteOfNewPost'>Copyright
+                <i class="fa fa-copyright" aria-hidden="true"></i>2022</footer>
+            </div>
         </div>
     )
 }

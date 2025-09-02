@@ -7,13 +7,13 @@
 .headerSection{
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px ; 
+    padding: 10px 40px ; 
     background-color:navy ;
     align-items: center;
 }
 .loginAndRegisterSection{
     display: flex;
-    gap:20px;
+    gap:23px;
 }
 .titleOfLoginScreen{
     color:white;
@@ -35,10 +35,11 @@
      background-color: #ffffff;
      box-shadow: 3px 2px 1px rgb(176, 176, 176);
 }
-.titleLogin{
-font-size: 23px;
+.titleLoginOfDashboard{
+font-size: 27px;
      font-weight: 600 ;
      margin-bottom: 8px;
+     font-weight: 700;
 
 }
 .subtitleLoginPage{
@@ -64,4 +65,14 @@ font-size: 17px;
 font-size: 14px;
     font-weight:600 ;
     border-radius: 3px;
+}
+.footerNoteOfDashboard{
+    position: fixed;  
+  font-size: 14px;     
+  bottom: 0;             
+  left: 0;
+  width: 100%;           
+  text-align: center;    
+  padding: 3px;
+  background-color: rgb(188, 187, 187);
 }

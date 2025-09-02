@@ -12,7 +12,7 @@ background-color: navy;
 color: white;
 }
 .titleOfNewPostPage{
-font-size: 20px;
+font-size: 23px;
 font-weight: 600;
 }
 .loginAndRegistrationSectionOfNewPost{
@@ -109,4 +109,14 @@ font-weight: 600;
 .buttonsOfNewPost{
     display: flex;
     gap:10px;
+}
+.footerNoteOfNewPost{
+    position: fixed;  
+  font-size: 14px;     
+  bottom: 0;             
+  left: 0;
+  width: 100%;           
+  text-align: center;    
+  padding: 3px;
+  background-color: rgb(188, 187, 187);
 }

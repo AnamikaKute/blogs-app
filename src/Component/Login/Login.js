@@ -24,7 +24,8 @@ function Login(){
             <div className='btnSectionOfLoginPage'><button className='btnLogin'>Login</button></div>
             
             </div>
-            <footer className='footerNoteOfLoginPage'>Copyright@2022</footer>
+            <footer className='footerNoteOfLoginPage'>Copyright
+                <i class="fa fa-copyright" aria-hidden="true"></i>2022</footer>
         </div>
     ) 
 }

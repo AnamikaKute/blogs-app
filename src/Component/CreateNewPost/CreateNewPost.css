@@ -1,0 +1,112 @@
+.MainSectionOfNewPost{
+margin: 0px;
+height: 100vh;
+background-color: lightgray;
+}
+.headerSectionOfNewPost{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 40px;
+background-color: navy;
+color: white;
+}
+.titleOfNewPostPage{
+font-size: 20px;
+font-weight: 600;
+}
+.loginAndRegistrationSectionOfNewPost{
+display: flex;
+gap:20px;
+
+}
+.rightSectionTitlesOfNewPostPage{
+    font-size: 17px;
+    font-weight: 600;
+}
+.headSectionOfNewPost{
+    width: 61%;
+    margin: auto;
+}
+.btnAndTitleSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.headTitleOfNewPost{
+    font-size: 40px;
+    font-weight: 700;
+}
+.createNewPostBtn{
+    padding: 12px 10px;
+    background-color: navy;
+    color:white;
+    border: none;
+    border-radius: 5px ;
+    font-size: 13px;
+    font-weight: 600;
+    
+}
+
+
+.innerBoxOfNewPost{
+    width: 60%;
+    height: 45vh;
+    padding: 13px;
+    margin: auto;
+    border-radius: 7px;
+    background-color: #ffffff;
+    box-shadow: 1px 2px 2px grey ;
+}
+.helloWorldTitle{
+    font-size: 40px;
+    font-weight: 700;
+}
+.paragraphSectionOfNewPost{
+    font-size: 15px;
+}
+.btnSectionOfNewPost{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+}
+.likeButton{
+padding: 8px 13px;
+background-color: rgb(14, 185, 14);
+color:white;
+border: none;
+border-radius: 4px;
+
+}
+.dislikeButton{
+padding: 8px 13px;
+background-color: rgb(250, 250, 5);
+border: none;
+color:white;
+border-radius: 4px;
+
+}
+.editButton{
+padding: 8px 20px;
+background-color:rgb(2, 84, 2) ;
+color:white;
+border: none;
+border-radius: 4px;
+font-size: 14px;
+font-weight: 600;
+}
+.deleteButton{
+padding: 8px 20px;
+background-color:red ;
+color:white;
+border: none;
+border-radius: 4px;
+font-size: 14px;
+font-weight: 600;
+}
+.buttonsOfNewPost{
+    display: flex;
+    gap:10px;
+}

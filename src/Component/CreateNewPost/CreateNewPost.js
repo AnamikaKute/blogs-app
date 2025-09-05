@@ -1,19 +1,55 @@
+import { useNavigate } from 'react-router-dom';
 import './CreateNewPost.css';
+import { useState } from 'react';
 function CreateNewPost() {
+    const navigate = useNavigate();
+    const navigateToTitle = () => {
+        navigate("/title");
+    }
+    const navigateToLogin = () => {
+        navigate("/login");
+    }
+    const navigateToDashboard = () => {
+        navigate("/");
+    }
+
+
+
+    const blogsinfo = [
+        {
+            Title: "hello world",
+            Createdby: "ishwarikanase@gmail.com",
+            Createdat: "1st Dec 2022",
+            Description: "Lorem Ipsum is simply dummy text "
+        },
+        {
+            Title: "hello world",
+            Createdby: "ishwarikanase@gmail.com",
+            Createdat: "1st Dec 2022",
+            Description: "Lorem Ipsum is simply dummy text "
+        },
+        {
+            Title: "hello world",
+            Createdby: "ishwarikanase@gmail.com",
+            Createdat: "1st Dec 2022",
+            Description: "Lorem Ipsum is simply dummy text "
+        }
+    ]
+
     return (
         <div className='MainSectionOfNewPost'>
             <div className='headerSectionOfNewPost'>
-                <div className='titleOfNewPostPage'>Blogs</div>
+                <div className='titleOfNewPostPage' onClick={navigateToDashboard}>Blogs</div>
                 <div className='loginAndRegistrationSectionOfNewPost'>
-                    <div className='rightSectionTitlesOfNewPostPage'>Ishwari Kanase   <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></div>
-                    <div className='rightSectionTitlesOfNewPostPage'>Logout</div>
+                    <div className='rightSectionTitlesOfNewPostPage'>Ishwari Kanase<i class="fa fa-arrow-circle-o-right rightArrow" aria-hidden="true"></i></div>
+                    <div className='rightSectionTitlesOfNewPostPage' onClick={navigateToLogin}>Logout</div>
                 </div>
 
             </div>
             <div className='headSectionOfNewPost'>
                 <div className='btnAndTitleSection'>
                     <div className='headTitleOfNewPost'>Blogs</div>
-                    <div><button className='createNewPostBtn'><i class="fa fa-plus-circle " aria-hidden="true"></i>  Create new post</button></div>
+                    <div><button className='createNewPostBtn' onClick={navigateToTitle}><i class="fa fa-plus-circle " aria-hidden="true"></i>  Create new post</button></div>
 
                 </div>
                 <div className='subTitleSectionOfNewPost'>
@@ -21,36 +57,33 @@ function CreateNewPost() {
                     <hr />
                 </div>
             </div>
-            <div className='innerBoxOfNewPost'>
-                <div className='helloWorldTitle'>Hello World</div>
-                <div><strong>Created By</strong><em>ishwari.kanase@gmail.com</em></div>
-                <div><strong>Created At</strong> <em>1st Dec ,2021</em></div>
-                <hr />
-                <div className='paragraphSectionOfNewPost'>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-                versions of Lorem Ipsum.
-                </div>
-                <div className='btnSectionOfNewPost'>
-                    <div className='buttonsOfNewPost'>
-                    <div><button className='likeButton'><i class="fa fa-thumbs-up" aria-hidden="true"></i></button></div>
-                    <div><button className='dislikeButton'><i class="fa fa-thumbs-down" aria-hidden="true"></i></button></div>
+            {blogsinfo.map((blog) => {
+
+                return <div className='innerBoxOfNewPost'>
+                    <div className='helloWorldTitle'>{blog.Title}</div>
+                    <div><strong>Created By</strong><em>{blog.Createdby}</em></div>
+                    <div><strong>Created At</strong> <em>{blog.Createdat}</em></div>
+                    <hr />
+                    <div className='paragraphSectionOfNewPost'>
+                        {blog.Description}
                     </div>
-                    <div className='buttonsOfNewPost'>
-                        <div><button className='editButton'><i class="fa fa-pencil" aria-hidden="true"></i>  Edit</button></div>
-                    <div><button className='deleteButton'><i class="fa fa-trash-o" aria-hidden="true"></i>  Delete</button></div>
+                    <div className='btnSectionOfNewPost'>
+                        <div className='buttonsOfNewPost'>
+                            <div><button className='likeButton'><i className="fa fa-thumbs-up" aria-hidden="true"></i></button></div>
+                            <div><button className='dislikeButton'><i className="fa fa-thumbs-down" aria-hidden="true"></i></button></div>
+                        </div>
+                        <div className='buttonsOfNewPost'>
+                            <div><button className='editButton' onClick={navigateToTitle}><i className="fa fa-pencil" aria-hidden="true"></i>  Edit</button></div>
+                            <div><button className='deleteButton'><i className="fa fa-trash-o" aria-hidden="true"></i>  Delete</button></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            })}
             <div>
-            <footer className='footerNoteOfNewPost'>Copyright
+            <footer className='footerNoteOfLoginPage'>Copyright
                 <i class="fa fa-copyright" aria-hidden="true"></i>2022</footer>
-            </div>
         </div>
+        </div >
     )
 }
 export default CreateNewPost;

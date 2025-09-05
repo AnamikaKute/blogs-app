@@ -1,13 +1,24 @@
+import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
 
 function Dashboard() {
+    const navigate=useNavigate();
+    const navigateToLogin=()=>{
+        navigate("/login");
+
+    }
+    const navigateToRegister=()=>{
+        navigate("/register");
+    }
+    
+
     return (
         <div className='mainSectionOfDashboardPage'>
             <div className='headerSection'>
                 <div className='titleOfLoginScreen'>Blogs</div>
                 <div className='loginAndRegisterSection'>
-                    <div className='loginSection'>Login</div>
-                    <div className='loginSection'>Register</div>
+                    <div className='loginSection' onClick={navigateToLogin}>Login</div>
+                    <div className='loginSection' onClick={navigateToRegister}>Register</div>
 
                 </div>
             </div>
@@ -17,8 +28,8 @@ function Dashboard() {
                 <hr />
             
             <div className='buttonSection'>
-                    <div><button className='loginButton'>Login</button></div>
-                    <div><button className='registerButton'>Register</button></div>
+                    <div><button className='loginButton' onClick={navigateToLogin}>Login</button></div>
+                    <div><button className='registerButton ' onClick={navigateToRegister}>Register</button></div>
 
             </div>
              <footer className='footerNoteOfDashboard'>Copyright

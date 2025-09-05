@@ -10,9 +10,10 @@
     background-color: navy;
     color: white;
     justify-content: space-between;
+    align-items: center;
 }
 .leftSectionTitlesOfLoginPage{
-    font-size: 19px;
+    font-size: 23px;
     font-weight: 600;
 }
 .rightSectionTitlesOfLoginPage{

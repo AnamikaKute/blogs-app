@@ -1,8 +1,109 @@
 {
-    "users" :[
-        {
-            "name":"anamika"
-
-        }
-    ]
+  "users": [
+    {
+      "name": "anamika",
+      "id": "5208"
+    },
+    {
+      "id": "fa06",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "mypassword"
+    },
+    {
+      "id": "80bc",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "mypassword"
+    },
+    {
+      "id": "f0d6",
+      "name": "anamika",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "174e",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "1e0a",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "18b8",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "2e6f",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "cb71",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "ac96",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "7b51",
+      "name": "anelina Doe",
+      "email": "doeanajelina@gmail.com",
+      "password": "789"
+    },
+    {
+      "id": "d33c",
+      "name": "rutuja date",
+      "email": "daterutuja@gmail.com",
+      "password": "897"
+    },
+    {
+      "id": "e606",
+      "name": "rutuja date",
+      "email": "daterutuja@gmail.com",
+      "password": "678"
+    },
+    {
+      "id": "2921",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "5cda",
+      "name": "rutuja date",
+      "email": "daterutuja@gmail.com",
+      "password": "456"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "11ed",
+      "title": "anamika's blog",
+      "description": "it is my first blog"
+    },
+    {
+      "id": "07f9",
+      "title": "another blog ",
+      "description": "hey! i am gonna write my first blog"
+    },
+    {
+      "id": "d86d",
+      "title": "new blog ",
+      "description": "new blog is coming "
+    }
+  ]
 }

@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import './Title.css';
-import { useState } from 'react';
+import React,  { useEffect,useState } from 'react';
+import axios from 'axios';
+
 
 function Title(){
     const navigate=useNavigate();
@@ -10,23 +12,51 @@ function Title(){
      const navigateToDashboard=()=>{
         navigate("/");
     }
-      const [userdata,setUserData]=useState({title:"",description:""});
+      const [blogsdata,setBlogsData]=useState({title:"",description:""});
     function handleTitleChange(event) {
-  let user={...userdata}
-    user["title"]=event.target.value;
-    setUserData(user)
+  let blog={...blogsdata}
+    blog["title"]=event.target.value;
+    setBlogsData(blog)
 
   }function handleDescriptionChange(event) {
-      let user={...userdata}
-    user["description"]=event.target.value;
-    setUserData(user)
+      let blog={...blogsdata}
+    blog["description"]=event.target.value;
+    setBlogsData(blog)
   }
-function handleSave() {
-    console.log(userdata);
+function handleSave(event) {
+    // console.log(userdata);
+  event.preventDefault();
+  axios.post('http://localhost:3001/blogs', blogsdata)
+  .then(
+    response => {
+      console.log('Data received:', response.data);
+    })
+    .catch(error=> {
+      console.error('Request failed:', error.message);
+    }
+  );
+
   }
+function BlogList() {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get('https://localhost:3001/blogs' ,blogsdata) // Replace with your real API
+      .then((response) => {
+        setBlogs(response.data); // Adjust if your API wraps data differently
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error.message || 'Something went wrong');
+        setLoading(false);
+      });
+  }, []);
 
 
-
+}
     
     return(
         <div className='MainSectionOfTitlePage'>
@@ -40,11 +70,11 @@ function handleSave() {
             </div>
             <div className='outerBoxOfTitlePage'>
                 <div>
-                    <input type='text'placeholder='Title' className='mainTitleInOuterBox' value={userdata.title} onChange={handleTitleChange}></input>
+                    <input type='text'placeholder='Title' className='mainTitleInOuterBox' value={blogsdata.title} onChange={handleTitleChange}></input>
                 </div>
                 <hr/>
                 <div>
-                    <textarea className='textareaField' value={userdata.description} onChange={handleDescriptionChange}>Desription</textarea>
+                    <textarea className='textareaField' value={blogsdata.description} onChange={handleDescriptionChange}>Desription</textarea>
                 </div>
                 <div className='btnSectionOfTitlePage'>
                     <div><button className='cancelAndSaveBtn' >Cancel</button></div>
@@ -52,8 +82,9 @@ function handleSave() {
 
                 </div>
             </div>
-            <div className='footerNote'>Copyright<i class="fa fa-copyright" aria-hidden="true"></i>2022</div>
+            <div className='footerNote'>Copyright<i class="fa fa-copyright" aria-hidden="true" ></i>2022</div>
         </div>
     )
 }
+
 export  default Title;

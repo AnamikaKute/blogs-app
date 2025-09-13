@@ -87,23 +87,61 @@
       "name": "rutuja date",
       "email": "daterutuja@gmail.com",
       "password": "456"
+    },
+    {
+      "id": "3e99",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "3f47",
+      "name": "anelina Doe",
+      "email": "doeanajelina@gmail.com",
+      "password": "789"
+    },
+    {
+      "id": "8813",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "89c2",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "3fbe",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "2562",
+      "name": "anamika kute ",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
     }
   ],
   "blogs": [
     {
-      "id": "11ed",
-      "title": "anamika's blog",
-      "description": "it is my first blog"
+      "title": "hello this is anamika kkk",
+      "description": "hi this is abc from india ana",
+      "id": "5",
+      "likes": 4,
+      "dislikes": 3
     },
     {
-      "id": "07f9",
-      "title": "another blog ",
-      "description": "hey! i am gonna write my first blog"
+      "title": "hello Sam from india",
+      "description": "i am sam my hometown is in dubai",
+      "id": "6"
     },
     {
-      "id": "d86d",
-      "title": "new blog ",
-      "description": "new blog is coming "
+      "id": "bae8",
+      "title": "hi am srush",
+      "description": "i am gonna post my blog for the very first time"
     }
   ]
 }

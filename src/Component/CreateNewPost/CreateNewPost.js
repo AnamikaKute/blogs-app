@@ -1,145 +1,15 @@
-// import { useNavigate } from 'react-router-dom';
-// import './CreateNewPost.css';
-// // import { useState } from 'react';
-//   import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-
-
-// function CreateNewPost() {
-//     const navigate = useNavigate();
-//     const navigateToTitle = () => {
-//         navigate("/title");
-//     }
-//     const navigateToLogin = () => {
-//         navigate("/login");
-//     }
-//     const navigateToDashboard = () => {
-//         navigate("/");
-//     }
-  
-
-// function CreateNewPost() {
-//   const [blogs, setBlogs] = useState([]);
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
-
-//   useEffect(() => { 
-//       axios
-//       .get('http://your-api.com/api/blogs' ,blogs) // Replace with your API URL
-//       .then((response) => {
-//         setBlogs(response.data); // adjust based on response shape
-//         setLoading(false);
-//       })
-//       .catch((err) => {
-//         setError(err.message || 'Error fetching blogs');
-//         setLoading(false);
-//       });
-//   }, []);
-
-//   if (loading) return <p>Loading blogs...</p>;
-//   if (error) return <p>Error: {error}</p>;
-
-// //   return (
-// //     <div className="post-screen">
-// //       <h2>All Blog Posts</h2>
-// //       <ul>
-// //         {blogs.map((blog) => (
-// //           <li key={blog.id}>
-// //             <h3>{blog.title}</h3>
-// //             <p>{blog.content}</p>
-// //             <small>Author: {blog.author}</small>
-// //           </li>
-// //         ))}
-// //       </ul>
-// //     </div>
-// //   );
-// // }
-
-// // export default PostScreen;
-
-
-
-//     const blogsinfo = [
-//         {
-//             Title: "hello world",
-//             Createdby: "ishwarikanase@gmail.com",
-//             Createdat: "1st Dec 2022",
-//             Description: "Lorem Ipsum is simply dummy text "
-//         },
-//         {
-//             Title: "hello world",
-//             Createdby: "ishwarikanase@gmail.com",
-//             Createdat: "1st Dec 2022",
-//             Description: "Lorem Ipsum is simply dummy text "
-//         },
-//         {
-//             Title: "hello world",
-//             Createdby: "ishwarikanase@gmail.com",
-//             Createdat: "1st Dec 2022",
-//             Description: "Lorem Ipsum is simply dummy text "
-//         }
-//     ]
-
-//     return (
-//         <div className='MainSectionOfNewPost'>
-//             <div className='headerSectionOfNewPost'>
-//                 <div className='titleOfNewPostPage' onClick={navigateToDashboard}>Blogs</div>
-//                 <div className='loginAndRegistrationSectionOfNewPost'>
-//                     <div className='rightSectionTitlesOfNewPostPage'>Ishwari Kanase<i class="fa fa-arrow-circle-o-right rightArrow" aria-hidden="true"></i></div>
-//                     <div className='rightSectionTitlesOfNewPostPage' onClick={navigateToLogin}>Logout</div>
-//                 </div>
-
-//             </div>
-//             <div className='headSectionOfNewPost'>
-//                 <div className='btnAndTitleSection'>
-//                     <div className='headTitleOfNewPost'>Blogs</div>
-//                     <div><button className='createNewPostBtn' onClick={navigateToTitle}><i class="fa fa-plus-circle " aria-hidden="true"></i>  Create new post</button></div>
-
-//                 </div>
-//                 <div className='subTitleSectionOfNewPost'>
-//                     Publish your passions ,your way...
-//                     <hr />
-//                 </div>
-//             </div>
-//             {blogs.map((blog) => {
-//         //   <li key={blog.id}>
-
-//                 return <div className='innerBoxOfNewPost' key={blog.id}>
-//                     <div className='helloWorldTitle'>{blog.Title}</div>
-//                     <div><strong>Created By</strong><em>{blog.Createdby}</em></div>
-//                     <div><strong>Created At</strong> <em>{blog.Createdat}</em></div>
-//                     <hr />
-//                     <div className='paragraphSectionOfNewPost'>
-//                         {blog.Description}
-//                     </div>
-//                     <div className='btnSectionOfNewPost'>
-//                         <div className='buttonsOfNewPost'>
-//                             <div><button className='likeButton'><i className="fa fa-thumbs-up" aria-hidden="true"></i></button></div>
-//                             <div><button className='dislikeButton'><i className="fa fa-thumbs-down" aria-hidden="true"></i></button></div>
-//                         </div>
-//                         <div className='buttonsOfNewPost'>
-//                             <div><button className='editButton' onClick={navigateToTitle}><i className="fa fa-pencil" aria-hidden="true" onClick={navigateToTitle}></i>  Edit</button></div>
-//                             <div><button className='deleteButton'><i className="fa fa-trash-o" aria-hidden="true"></i>  Delete</button></div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             })}
-//             <div>
-//             <footer className='footerNoteOfLoginPage'>Copyright
-//                 <i class="fa fa-copyright" aria-hidden="true"></i>2022</footer>
-//         </div>
-//         </div >
-//     )
-// }
-// }
-// export default CreateNewPost;
-import { useNavigate } from 'react-router-dom';
+import { useL,useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './CreateNewPost.css';
+import { useParams } from "react-router-dom";
+
 
 function CreateNewPost() {
+  const [blogsdata, setBlogsData] = useState([]);
+
   const navigate = useNavigate();
+  const { id } = useParams();
   
   const navigateToTitle = () => {
     navigate("/title");
@@ -151,33 +21,41 @@ function CreateNewPost() {
     navigate("/");
   }
 
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
   useEffect(() => {
-    axios.get('http://localhost:3001/blogs') // replace with real API url
-      .then((response) => {
-        setBlogs(response.data); // adjust if response shape is different
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message || 'Error fetching blogs');
-        setLoading(false);
-      });
-  }, []);
- 
-  function handleDelete(id) {
-  axios.delete("http://localhost:3001/blogs/" + id)
-    .then(() => {
-      console.log("Deleted blog:", id);
+    axios.get("http://localhost:3001/blogs").then((res) => {
+      setBlogsData(res.data);
     });
-}
+  }, []);
 
-
-
-  if (loading) return <p>Loading blogs...</p>;
-  if (error) return <p>Error: {error}</p>;
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:3001/blogs/${id}`).then(() => {
+      setBlogsData(blogsdata.filter((b) => b.id !== id));
+    });
+  };
+ const handleLike = (id, currentLikes) => {
+    axios
+      .patch(`http://localhost:3001/blogs/${id}`, { likes: currentLikes + 1 })
+      .then((res) => {
+        setBlogsData(
+          blogsdata.map((b) =>
+            b.id === id ? { ...b, likes: res.data.likes } : b
+          )
+        );
+      });
+  };
+const handleDislike = (id, currentDislikes) => {
+    axios
+      .patch(`http://localhost:3001/blogs/${id}`, {
+        dislikes: currentDislikes + 1,
+      })
+      .then((res) => {
+        setBlogsData(
+          blogsdata.map((b) =>
+            b.id === id ? { ...b, dislikes: res.data.dislikes } : b
+          )
+        );
+      });
+  };
 
   return (
     <div className='MainSectionOfNewPost'>
@@ -204,26 +82,26 @@ function CreateNewPost() {
         </div>
       </div>
 
-      {blogs.length === 0 ? (
+     {blogsdata.length === 0 ? (
         <p>No blogs found.</p>
       ) : (
-        blogs.map((blog, index) => (
+        blogsdata.map((blog, index) => (
           <div className='innerBoxOfNewPost' key={blog.id || index}>
-            <div className='helloWorldTitle'>{blog.Title || blog.title}</div>
-            <div><strong>Created By </strong><em>{blog.Createdby || blog.author}</em></div>
-            <div><strong>Created At </strong><em>{blog.Createdat || blog.createdAt}</em></div>
+            <div className='helloWorldTitle'>{blog.title}</div>
+            <div><strong>Created By </strong><em>{blog.createdby  }</em></div>
+            <div><strong>Created At </strong><em>{blog.createdat }</em></div>
             <hr />
             <div className='paragraphSectionOfNewPost'>
-              {blog.Description || blog.content}
+              {blog.description}
             </div>
             <div className='btnSectionOfNewPost'>
               <div className='buttonsOfNewPost'>
-                <div><button className='likeButton'><i className="fa fa-thumbs-up" aria-hidden="true"></i></button></div>
-                <div><button className='dislikeButton'><i className="fa fa-thumbs-down" aria-hidden="true"></i></button></div>
+                <div><button className='likeButton' onClick={() => handleLike(blog.id, blog.likes)}><i className="fa fa-thumbs-up" aria-hidden="true">{blog.likes}</i></button></div>
+                <div><button className='dislikeButton' onClick={() => handleDislike(blog.id, blog.dislikes)}><i className="fa fa-thumbs-down" aria-hidden="true">{blog.dislikes}</i></button></div>
               </div>
               <div className='buttonsOfNewPost'>
-                <div><button className='editButton' onClick={navigateToTitle}><i className="fa fa-pencil" aria-hidden="true"></i> Edit</button></div>
-                <div><button className='deleteButton'  onClick={handleDelete}><i className="fa fa-trash-o" aria-hidden="true"></i> Delete</button></div>
+                <div><button className='editButton' onClick={()=>navigate("/title/"+blog.id)}><i className="fa fa-pencil" aria-hidden="true"></i> Edit</button></div>
+                <div><button className='deleteButton' onClick={() =>handleDelete(blog.id)}><i className="fa fa-trash-o" aria-hidden="true"></i> Delete</button></div>
               </div>
             </div>
           </div>
@@ -236,5 +114,6 @@ function CreateNewPost() {
     </div>
   );
 }
+
 
 export default CreateNewPost;

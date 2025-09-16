@@ -130,18 +130,13 @@
       "title": "hello this is anamika kkk",
       "description": "hi this is abc from india ana",
       "id": "5",
-      "likes": 4,
-      "dislikes": 3
+      "likes": 3
     },
     {
       "title": "hello Sam from india",
       "description": "i am sam my hometown is in dubai",
-      "id": "6"
-    },
-    {
-      "id": "bae8",
-      "title": "hi am srush",
-      "description": "i am gonna post my blog for the very first time"
+      "id": "6",
+      "dislikes": 1
     }
   ]
 }

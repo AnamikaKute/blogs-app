@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
 
 function CreateNewPost() {
   const [blogsdata, setBlogsData] = useState([]);
-
   const navigate = useNavigate();
   const { id } = useParams();
   
@@ -57,6 +56,9 @@ const handleDislike = (id, currentDislikes) => {
       });
   };
 
+const user = JSON.parse(localStorage.getItem("user"));
+
+
   return (
     <div className='MainSectionOfNewPost'>
       <div className='headerSectionOfNewPost'>
@@ -88,11 +90,14 @@ const handleDislike = (id, currentDislikes) => {
         blogsdata.map((blog, index) => (
           <div className='innerBoxOfNewPost' key={blog.id || index}>
             <div className='helloWorldTitle'>{blog.title}</div>
-            <div><strong>Created By </strong><em>{blog.createdby  }</em></div>
-            <div><strong>Created At </strong><em>{blog.createdat }</em></div>
+            <div><strong>Created By </strong><em>{user ? user.email : "Unknown"} </em></div>
+            <div><strong>Created At </strong><em> {blog.createdat } </em></div>
+            {/* <div><strong>Created At </strong><em>{user ? user.email : "Unknown"} </em></div> */}
+
             <hr />
             <div className='paragraphSectionOfNewPost'>
               {blog.description}
+              {/* {user ? user.email : "Unknown"}  */}
             </div>
             <div className='btnSectionOfNewPost'>
               <div className='buttonsOfNewPost'>

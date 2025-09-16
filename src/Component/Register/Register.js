@@ -23,6 +23,7 @@ function Register() {
   }
 
   const [userdata,setUserData]=useState({name:"",email:"",password:""});
+
   function handleNameChange(event) {
      let user={...userdata}
     user["name"]=event.target.value;
@@ -40,19 +41,9 @@ function handleEmailChange(event) {
     setUserData(user)
   }
   
-  // function handleRegister() {
-  //   console.log(userdata);
-  //   navigate("/login");
-  // }
-
-// const handleRegister= (event)=>{
-//  event.target;
-//  axios.post('https://')
-// }
 function handleRegister(event) {
   event.preventDefault();
     navigate("/login")
-
   
   axios.post('http://localhost:3001/users', userdata)
     .then(response => {

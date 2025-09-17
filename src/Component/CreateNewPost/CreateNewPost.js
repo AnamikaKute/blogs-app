@@ -90,8 +90,8 @@ const user = JSON.parse(localStorage.getItem("user"));
         blogsdata.map((blog, index) => (
           <div className='innerBoxOfNewPost' key={blog.id || index}>
             <div className='helloWorldTitle'>{blog.title}</div>
-            <div><strong>Created By </strong><em>{user ? user.email : "Unknown"} </em></div>
-            <div><strong>Created At </strong><em> {blog.createdat } </em></div>
+            <div><strong>Created By </strong><em>{blog.createdBy} </em></div>
+            <div><strong>Created At </strong><em> {blog.createdAt } </em></div>
             {/* <div><strong>Created At </strong><em>{user ? user.email : "Unknown"} </em></div> */}
 
             <hr />

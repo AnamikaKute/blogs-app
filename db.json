@@ -123,20 +123,39 @@
       "name": "anamika kute ",
       "email": "kuteanamika@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "5da2",
+      "name": "rutuja date",
+      "email": "daterutuja@gmail.com",
+      "password": "678"
     }
   ],
   "blogs": [
     {
-      "title": "hello this is anamika kkk",
-      "description": "hi this is abc from india ana",
-      "id": "5",
-      "likes": 3
+      "id": "4461",
+      "title": "hey this is xyz",
+      "description": "i am from dubai,sharjah.",
+      "likes": 2
     },
     {
-      "title": "hello Sam from india",
-      "description": "i am sam my hometown is in dubai",
-      "id": "6",
-      "dislikes": 1
+      "id": "248d",
+      "title": "Abc ",
+      "description": "hello good morning",
+      "createdBy": "daterutuja@gmail.com"
+    },
+    {
+      "id": "5f60",
+      "title": "hi am ABC",
+      "description": "this is gonna my first blog",
+      "createdBy": "daterutuja@gmail.com",
+      "createdAt": "9/17/2025"
+    },
+    {
+      "title": "hi this is hvk ",
+      "description": "asdfghjkllzcxvvnmn,.u",
+      "createdBy": "daterutuja@gmail.com",
+      "id": "6c26"
     }
   ]
 }

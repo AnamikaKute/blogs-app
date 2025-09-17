@@ -129,6 +129,30 @@
       "name": "rutuja date",
       "email": "daterutuja@gmail.com",
       "password": "678"
+    },
+    {
+      "id": "f844",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "5014",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "9d9a",
+      "name": "anelina Doe",
+      "email": "doeanajelina@gmail.com",
+      "password": "789"
+    },
+    {
+      "id": "3611",
+      "name": "rutuja date ",
+      "email": "daterutuja@gmail.com",
+      "password": "678"
     }
   ],
   "blogs": [
@@ -136,7 +160,7 @@
       "id": "4461",
       "title": "hey this is xyz",
       "description": "i am from dubai,sharjah.",
-      "likes": 2
+      "likes": 3
     },
     {
       "id": "248d",
@@ -152,10 +176,18 @@
       "createdAt": "9/17/2025"
     },
     {
-      "title": "hi this is hvk ",
-      "description": "asdfghjkllzcxvvnmn,.u",
-      "createdBy": "daterutuja@gmail.com",
+      "title": "hi this is hvk fdvgffcvvvv",
+      "description": "asdfghjkllzcxvvnmn,.uvjhvcxvbfcnv 242424",
+      "createdAt": "9/17/2025",
+      "createdBy": "kuteanamika@gmail.com",
       "id": "6c26"
+    },
+    {
+      "title": "dsbhj j f",
+      "description": "djsbhcnnn  nnewb,dbdbyigt2136789fbvf",
+      "createdAt": "9/17/2025",
+      "createdBy": "kuteanamika@gmail.com",
+      "id": "6f02"
     }
   ]
 }

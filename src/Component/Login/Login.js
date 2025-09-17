@@ -35,6 +35,10 @@ function Login() {
         console.log("Entered email:", userdata.email);
         console.log("Entered password:", userdata.password);
 
+         const users = JSON.parse(localStorage.getItem("users")) || [];
+        //  const user = users.find(u => u.email === email && u.password === password);
+
+
 
 axios.get("http://localhost:3001/users")
   .then((res) => {

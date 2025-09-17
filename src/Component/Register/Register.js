@@ -43,6 +43,14 @@ function handleEmailChange(event) {
   
 function handleRegister(event) {
   event.preventDefault();
+
+  // localStorage.setItem("loggedInUser", JSON.stringify(user));
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  users.push(userdata); // userdata = {name, email, password}
+  localStorage.setItem("users", JSON.stringify(users));
+
+
+
     navigate("/login")
   
   axios.post('http://localhost:3001/users', userdata)
@@ -52,7 +60,16 @@ function handleRegister(event) {
     .catch(error => {
       console.error('Request failed:', error.message);
     });
+
+
+
+
+
+
+
+
 }
+
 
 
   

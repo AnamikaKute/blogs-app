@@ -14,7 +14,8 @@ function Title() {
 
   const [blogsdata, setBlogsData] = useState({
     title: "",
-    description: ""
+    description: "",
+    
   });
 
   function handleTitleChange(event) {
@@ -36,6 +37,8 @@ const user = JSON.parse(localStorage.getItem("user"));
     const blogWithUser = {
       ...blogsdata,
       createdBy: user?.email || "Anonymous",
+      createdAt: new Date().toLocaleDateString()
+
     };
 
     axios.put(`http://localhost:3001/blogs/${id}`, blogWithUser)
@@ -60,7 +63,8 @@ const user = JSON.parse(localStorage.getItem("user"));
       axios.get(`http://localhost:3001/blogs/${id}`).then((res) => {
         setBlogsData({
           title: res.data.title,
-          description: res.data.description
+          description: res.data.description ,
+          createdAt: res.data.createdAt,
         });
       });
     }

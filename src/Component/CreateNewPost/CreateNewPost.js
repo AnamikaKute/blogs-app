@@ -9,7 +9,10 @@ function CreateNewPost() {
   const [blogsdata, setBlogsData] = useState([]);
   const navigate = useNavigate();
   const { id } = useParams();
-  
+  const user = JSON.parse(localStorage.getItem("user"));
+
+
+
   const navigateToTitle = () => {
     navigate("/title");
   }
@@ -56,7 +59,7 @@ const handleDislike = (id, currentDislikes) => {
       });
   };
 
-const user = JSON.parse(localStorage.getItem("user"));
+
 
 
   return (
@@ -92,24 +95,57 @@ const user = JSON.parse(localStorage.getItem("user"));
             <div className='helloWorldTitle'>{blog.title}</div>
             <div><strong>Created By </strong><em>{blog.createdBy} </em></div>
             <div><strong>Created At </strong><em> {blog.createdAt } </em></div>
-            {/* <div><strong>Created At </strong><em>{user ? user.email : "Unknown"} </em></div> */}
 
             <hr />
             <div className='paragraphSectionOfNewPost'>
               {blog.description}
-              {/* {user ? user.email : "Unknown"}  */}
             </div>
+
+
             <div className='btnSectionOfNewPost'>
-              <div className='buttonsOfNewPost'>
-                <div><button className='likeButton' onClick={() => handleLike(blog.id, blog.likes)}><i className="fa fa-thumbs-up" aria-hidden="true">{blog.likes}</i></button></div>
-                <div><button className='dislikeButton' onClick={() => handleDislike(blog.id, blog.dislikes)}><i className="fa fa-thumbs-down" aria-hidden="true">{blog.dislikes}</i></button></div>
-              </div>
-              <div className='buttonsOfNewPost'>
-                <div><button className='editButton' onClick={()=>navigate("/title/"+blog.id)}><i className="fa fa-pencil" aria-hidden="true"></i> Edit</button></div>
-                <div><button className='deleteButton' onClick={() =>handleDelete(blog.id)}><i className="fa fa-trash-o" aria-hidden="true"></i> Delete</button></div>
-              </div>
-            </div>
+  {user?.email === blog.createdBy ? (
+    <div className='buttonsOfNewPost'>
+      <div>
+        <button
+          className='editButton'
+          onClick={() => navigate("/title/" + blog.id)}
+        >
+          <i className="fa fa-pencil" aria-hidden="true"></i> Edit
+        </button>
+      </div>
+      <div>
+        <button
+          className='deleteButton'
+          onClick={() => handleDelete(blog.id)}
+        >
+          <i className="fa fa-trash-o" aria-hidden="true"></i> Delete
+        </button>
+      </div>
+    </div>
+            ) : (
+    <div className='buttonsOfNewPost'>
+      <div>
+        <button
+          className='likeButton'
+          onClick={() => handleLike(blog.id, blog.likes)}
+        >
+          <i className="fa fa-thumbs-up" aria-hidden="true"></i> {blog.likes}
+        </button>
+      </div>
+      <div>
+        <button
+          className='dislikeButton'
+          onClick={() => handleDislike(blog.id, blog.dislikes)}
+        >
+          <i className="fa fa-thumbs-down" aria-hidden="true"></i> {blog.dislikes}
+        </button>
+      </div>
+    </div>
+  )}
+</div>
+
           </div>
+              
         ))
       )}
 

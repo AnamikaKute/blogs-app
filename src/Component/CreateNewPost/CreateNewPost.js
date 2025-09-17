@@ -10,6 +10,8 @@ function CreateNewPost() {
   const navigate = useNavigate();
   const { id } = useParams();
   const user = JSON.parse(localStorage.getItem("user"));
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
 
 
 
@@ -67,7 +69,7 @@ const handleDislike = (id, currentDislikes) => {
       <div className='headerSectionOfNewPost'>
         <div className='titleOfNewPostPage' onClick={navigateToDashboard}>Blogs</div>
         <div className='loginAndRegistrationSectionOfNewPost'>
-          <div className='rightSectionTitlesOfNewPostPage'>Ishwari Kanase<i className="fa fa-arrow-circle-o-right rightArrow" aria-hidden="true"></i></div>
+          <div className='rightSectionTitlesOfNewPostPage'> {loggedInUser ? loggedInUser.name : "Guest"} <i className="fa fa-arrow-circle-o-right rightArrow" aria-hidden="true"></i></div>
           <div className='rightSectionTitlesOfNewPostPage' onClick={navigateToLogin}>Logout</div>
         </div>
       </div>

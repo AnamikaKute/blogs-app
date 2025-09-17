@@ -153,6 +153,24 @@
       "name": "rutuja date ",
       "email": "daterutuja@gmail.com",
       "password": "678"
+    },
+    {
+      "id": "e18c",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "6286",
+      "name": "rutuja date",
+      "email": "daterutuja@gmail.com",
+      "password": "678"
+    },
+    {
+      "id": "edce",
+      "name": "anelina Doe",
+      "email": "doeanajelina@gmail.com",
+      "password": "789"
     }
   ],
   "blogs": [
@@ -169,11 +187,11 @@
       "createdBy": "daterutuja@gmail.com"
     },
     {
-      "id": "5f60",
-      "title": "hi am ABC",
-      "description": "this is gonna my first blog",
+      "title": "hi am ABC and xyz",
+      "description": "this is gonna my first blog ......",
+      "createdAt": "9/17/2025",
       "createdBy": "daterutuja@gmail.com",
-      "createdAt": "9/17/2025"
+      "id": "5f60"
     },
     {
       "title": "hi this is hvk fdvgffcvvvv",

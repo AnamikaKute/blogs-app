@@ -31,13 +31,10 @@ function Login() {
     }
 
     function handleLogin() {
-        console.log("All users from db.json:", userdata);
-        console.log("Entered email:", userdata.email);
-        console.log("Entered password:", userdata.password);
+        
+const savedUser = JSON.parse(localStorage.getItem("user"));
 
-         const users = JSON.parse(localStorage.getItem("users")) || [];
-        //  const user = users.find(u => u.email === email && u.password === password);
-
+        localStorage.setItem("loggedInUser", JSON.stringify(savedUser));
 
 
 axios.get("http://localhost:3001/users")
@@ -54,22 +51,11 @@ axios.get("http://localhost:3001/users")
     if (loggedInUser) {
       console.log("Login successful");
       navigate("/createnewpost");
-
-    //   // store user directly as object (no JSON.stringify)
-    //   localStorage.setItem("userEmail", loggedInUser.email);
-    //   localStorage.setItem("userName", loggedInUser.name);
-    //   localStorage.setItem("userId", loggedInUser.id);
      localStorage.setItem("user", JSON.stringify(loggedInUser));
 } else {
   console.log("Invalid email or password");
 }
-    
-
   });
-
-
-        
-
     }
 
     return (

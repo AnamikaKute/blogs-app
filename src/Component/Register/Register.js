@@ -44,11 +44,8 @@ function handleEmailChange(event) {
 function handleRegister(event) {
   event.preventDefault();
 
-  // localStorage.setItem("loggedInUser", JSON.stringify(user));
-  const users = JSON.parse(localStorage.getItem("users")) || [];
-  users.push(userdata); // userdata = {name, email, password}
-  localStorage.setItem("users", JSON.stringify(users));
-
+  localStorage.setItem("user", JSON.stringify(userdata)); 
+    alert("Registered! Now login.");
 
 
     navigate("/login")
@@ -62,17 +59,8 @@ function handleRegister(event) {
     });
 
 
-
-
-
-
-
-
 }
 
-
-
-  
   return (
     <div className='mainSectionOfRegisterationPage'>
       <div className='headerSectionOfRegisterationPage'>
@@ -90,12 +78,18 @@ function handleRegister(event) {
         <hr/>
         <div className='titleRegister'>Register</div>
         <div><label className='labelsOfInputFields'>Name</label></div>
-        <div> <input type='text' placeholder='Firstname Lastname' className='placeholderFieldOfRegisterPage' value={userdata.name} onChange={handleNameChange} /></div>
+        <div> <input type='text' placeholder='Firstname Lastname' className='placeholderFieldOfRegisterPage' value={userdata.name}
+       onChange={ (e) => setUserData({ ...userdata, name: e.target.value })}
+         /></div>
         
         <div><label className='labelsOfInputFields'>Email id</label></div>
-        <div><input type='email' placeholder='test@gmail.com' className='placeholderFieldOfRegisterPage' value={userdata.email} onChange={handleEmailChange}></input></div>
+        <div><input type='email' placeholder='test@gmail.com' className='placeholderFieldOfRegisterPage' value={userdata.email} 
+        onChange={(e) =>
+          setUserData({ ...userdata, email: e.target.value })}></input></div>
         <div><label className='labelsOfInputFields'>Password</label></div>
-        <div><input type='password' placeholder='Test@123' className='placeholderFieldOfRegisterPage' value={userdata.password} onChange={handlePasswordChange}></input></div>
+        <div><input type='password' placeholder='Test@123' className='placeholderFieldOfRegisterPage' value={userdata.password}
+         onChange={(e) =>
+          setUserData({ ...userdata, password: e.target.value })}></input></div>
 
         <div className='btnSectionOfRegisterationPage'><button className='btnRegister' onClick={handleRegister} >Register</button></div>
 

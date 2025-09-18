@@ -1,8 +1,9 @@
-import { useL,useNavigate } from 'react-router-dom';
+import { useL, useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './CreateNewPost.css';
 import { useParams } from "react-router-dom";
+import moment from "moment";
 
 
 function CreateNewPost() {
@@ -11,9 +12,6 @@ function CreateNewPost() {
   const { id } = useParams();
   const user = JSON.parse(localStorage.getItem("user"));
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-
-
-
 
   const navigateToTitle = () => {
     navigate("/title");
@@ -24,7 +22,7 @@ function CreateNewPost() {
   const navigateToDashboard = () => {
     navigate("/");
   }
-
+  const today = moment().format("Do MMM, YYYY");
   useEffect(() => {
     axios.get("http://localhost:3001/blogs").then((res) => {
       setBlogsData(res.data);
@@ -36,7 +34,7 @@ function CreateNewPost() {
       setBlogsData(blogsdata.filter((b) => b.id !== id));
     });
   };
- const handleLike = (id, currentLikes) => {
+  const handleLike = (id, currentLikes) => {
     axios
       .patch(`http://localhost:3001/blogs/${id}`, { likes: currentLikes + 1 })
       .then((res) => {
@@ -47,7 +45,7 @@ function CreateNewPost() {
         );
       });
   };
-const handleDislike = (id, currentDislikes) => {
+  const handleDislike = (id, currentDislikes) => {
     axios
       .patch(`http://localhost:3001/blogs/${id}`, {
         dislikes: currentDislikes + 1,
@@ -89,14 +87,14 @@ const handleDislike = (id, currentDislikes) => {
         </div>
       </div>
 
-     {blogsdata.length === 0 ? (
+      {blogsdata.length === 0 ? (
         <p>No blogs found.</p>
       ) : (
         blogsdata.map((blog, index) => (
           <div className='innerBoxOfNewPost' key={blog.id || index}>
             <div className='helloWorldTitle'>{blog.title}</div>
             <div><strong>Created By </strong><em>{blog.createdBy} </em></div>
-            <div><strong>Created At </strong><em> {blog.createdAt } </em></div>
+            <div><strong>Created At </strong><em> {blog.createdAt} </em></div>
 
             <hr />
             <div className='paragraphSectionOfNewPost'>
@@ -105,49 +103,53 @@ const handleDislike = (id, currentDislikes) => {
 
 
             <div className='btnSectionOfNewPost'>
-  {user?.email === blog.createdBy ? (
-    <div className='buttonsOfNewPost'>
-      <div>
-        <button
-          className='editButton'
-          onClick={() => navigate("/title/" + blog.id)}
-        >
-          <i className="fa fa-pencil" aria-hidden="true"></i> Edit
-        </button>
-      </div>
-      <div>
-        <button
-          className='deleteButton'
-          onClick={() => handleDelete(blog.id)}
-        >
-          <i className="fa fa-trash-o" aria-hidden="true"></i> Delete
-        </button>
-      </div>
-    </div>
-            ) : (
-    <div className='buttonsOfNewPost'>
-      <div>
-        <button
-          className='likeButton'
-          onClick={() => handleLike(blog.id, blog.likes)}
-        >
-          <i className="fa fa-thumbs-up" aria-hidden="true"></i> {blog.likes}
-        </button>
-      </div>
-      <div>
-        <button
-          className='dislikeButton'
-          onClick={() => handleDislike(blog.id, blog.dislikes)}
-        >
-          <i className="fa fa-thumbs-down" aria-hidden="true"></i> {blog.dislikes}
-        </button>
-      </div>
-    </div>
-  )}
-</div>
+              <div className='buttonsOfNewPost'>
+                <div>
+                  <button
+                    className='likeButton'
+                    onClick={() => handleLike(blog.id, blog.likes)}
+                  >
+                    <i className="fa fa-thumbs-up" aria-hidden="true"></i> {blog.likes}
+                  </button>
+                </div>
+
+                <div>
+                  <button
+                    className='dislikeButton'
+                    onClick={() => handleDislike(blog.id, blog.dislikes)}
+                  >
+                    <i className="fa fa-thumbs-down" aria-hidden="true"></i> {blog.dislikes}
+                  </button>
+                </div>
+              </div>
+              <div className='buttonsOfNewPost'>
+                {user?.email === blog.createdBy && (
+                  <>
+                    <div>
+                      <button
+                        className='editButton'
+                        onClick={() => navigate("/title/" + blog.id)}
+                      >
+                        <i className="fa fa-pencil" aria-hidden="true"></i> Edit
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        className='deleteButton'
+                        onClick={() => handleDelete(blog.id)}
+                      >
+                        <i className="fa fa-trash-o" aria-hidden="true"></i> Delete
+                      </button>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+
+
 
           </div>
-              
+
         ))
       )}
 

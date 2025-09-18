@@ -171,6 +171,181 @@
       "name": "anelina Doe",
       "email": "doeanajelina@gmail.com",
       "password": "789"
+    },
+    {
+      "id": "59e7",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "643b",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "fc0c",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "b8c0",
+      "name": "anamika  kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "8861",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "a8f6",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "909b",
+      "name": "anamika kute",
+      "email": "kuteanamika@",
+      "password": ""
+    },
+    {
+      "id": "4d65",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "14b2",
+      "name": "anamika kute",
+      "email": "",
+      "password": "123"
+    },
+    {
+      "id": "51f0",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "1d69",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "5ad7",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "583d",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "e9d9",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "d819",
+      "name": "tejashri shelke",
+      "email": "shelke tajashri",
+      "password": "345"
+    },
+    {
+      "id": "ac37",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "e89a",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "5b8a",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "9197",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "3f73",
+      "email": "tejashrishelke@gmail..com",
+      "password": "234"
+    },
+    {
+      "id": "c641",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "7073",
+      "email": "tejashrishelke@gmail.com",
+      "password": "234"
+    },
+    {
+      "id": "6e82",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "f4ed",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "a478",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "432b",
+      "email": "tejashrishelke@gmail.com",
+      "password": "234"
+    },
+    {
+      "id": "1cff",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "39d8",
+      "name": "anamika kute",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "2e83",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "90c1",
+      "email": "tejashri selke",
+      "password": "234"
+    },
+    {
+      "id": "4d99",
+      "email": "kuteanamika@gmail.com",
+      "password": "123"
     }
   ],
   "blogs": [
@@ -191,7 +366,8 @@
       "description": "this is gonna my first blog ......",
       "createdAt": "9/17/2025",
       "createdBy": "daterutuja@gmail.com",
-      "id": "5f60"
+      "id": "5f60",
+      "likes": 3
     },
     {
       "title": "hi this is hvk fdvgffcvvvv",
@@ -202,10 +378,19 @@
     },
     {
       "title": "dsbhj j f",
-      "description": "djsbhcnnn  nnewb,dbdbyigt2136789fbvf",
-      "createdAt": "9/17/2025",
+      "description": "djsbhcnnn  nnewb,dbdbyigt2136789fbvf anamika",
+      "createdAt": "9/18/2025",
       "createdBy": "kuteanamika@gmail.com",
       "id": "6f02"
+    },
+    {
+      "id": "fbe9",
+      "title": "hi i am lalisa",
+      "description": "i am from south korea ",
+      "createdBy": "kuteanamika@gmail.com",
+      "likes": 1,
+      "dislikes": 0,
+      "createdAt": "18th Sep, 2025"
     }
   ]
 }

@@ -45,7 +45,7 @@ function handleRegister(event) {
   event.preventDefault();
 
   localStorage.setItem("user", JSON.stringify(userdata)); 
-    alert("Registered! Now login.");
+    alert("Registeration Successful! Now login.");
 
 
     navigate("/login")

@@ -30,33 +30,59 @@ function Login() {
         setUserData({ ...userdata, password: event.target.value });
     }
 
+
     function handleLogin() {
-        
-const savedUser = JSON.parse(localStorage.getItem("user"));
+        const trimmedEmail = userdata.email.trim();
+        const trimmedPassword = userdata.password.trim();
+
+        if (!trimmedEmail || !trimmedPassword) {
+            alert("Please enter the email and password");
+            return;
+        }
+        const savedUser = JSON.parse(localStorage.getItem("user"));
 
         localStorage.setItem("loggedInUser", JSON.stringify(savedUser));
 
 
-axios.get("http://localhost:3001/users")
-  .then((res) => {
-    let loggedInUser = null;
+        axios.get("http://localhost:3001/users")
+            .then((res) => {
 
-    res.data.map((u) => {
-      if (u.email === userdata.email && u.password === userdata.password) {
-        loggedInUser = u;
-      }
-      return u;
-    });
+                let loggedInUser = null;
 
-    if (loggedInUser) {
-      console.log("Login successful");
-      navigate("/createnewpost");
-     localStorage.setItem("user", JSON.stringify(loggedInUser));
-} else {
-  console.log("Invalid email or password");
-}
-  });
-    }
+
+                res.data.map((u) => {
+                    if (u.email === userdata.email && u.password === userdata.password) {
+                        loggedInUser = u; 
+                    }
+                    return u; 
+                });
+
+                if (!userdata.email.trim() || !userdata.password.trim()) {
+                    alert("Please enter the email and password");
+                } else if (loggedInUser) {
+                    localStorage.setItem("user", JSON.stringify(loggedInUser));
+                    alert("Login Successful!");
+                    navigate("/createnewpost");
+                } else {
+                    
+                    alert("Invalid email or password");
+                }
+
+            })
+            .catch((error) => {
+                console.error("Error fetching users:", error);
+                alert("Something went wrong. Please try again.");
+            });
+
+        axios.post('http://localhost:3001/users', userdata)
+            .then(response => {
+                console.log('User registered:', response.data);
+            })
+            .catch(error => {
+                console.error('Request failed:', error.message);
+            });
+    };
+
 
     return (
         <div className="mainSectionOfLoginPage">
@@ -118,6 +144,7 @@ axios.get("http://localhost:3001/users")
             </footer>
         </div>
     );
+
 }
 
 export default Login;

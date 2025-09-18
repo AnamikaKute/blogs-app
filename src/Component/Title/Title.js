@@ -2,6 +2,9 @@ import {useNavigate, useParams } from 'react-router-dom';
 import './Title.css';
 import React,  { useEffect,useState } from 'react';
 import axios from 'axios';
+import moment from "moment";
+
+
 function Title() {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -17,6 +20,8 @@ function Title() {
     description: "",
     
   });
+  
+
 
   function handleTitleChange(event) {
     let blog = { ...blogsdata };
@@ -30,15 +35,20 @@ function Title() {
     setBlogsData(blog);
   }
 
+
+
+
+
   function handleToSave() {
+  const today = moment().format("Do MMM, YYYY"); 
+
 const user = JSON.parse(localStorage.getItem("user"));
 
   if (id) {
     const blogWithUser = {
       ...blogsdata,
       createdBy: user?.email || "Anonymous",
-      createdAt: new Date().toLocaleDateString()
-
+       createdAt: today 
     };
 
     axios.put(`http://localhost:3001/blogs/${id}`, blogWithUser)
@@ -51,7 +61,7 @@ const user = JSON.parse(localStorage.getItem("user"));
       createdBy: user?.email || "Anonymous",
       likes: 0,
       dislikes: 0,
-      createdAt: new Date().toLocaleDateString(),
+      createdAt:today
     };
 
     axios.post("http://localhost:3001/blogs", blogWithUser)
